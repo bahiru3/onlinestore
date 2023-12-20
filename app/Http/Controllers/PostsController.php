@@ -8,4 +8,4 @@ class PostsController extends Controller
 {
     //
 }
-// Route::resource('/post','\app\Http\PController\PostsController');
+

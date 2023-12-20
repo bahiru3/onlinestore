@@ -12,14 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/about', function () {
-    return view('about');
-});
+Route::resource('/post','App\Http\Controllers\PostController');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('/', function () {
+//     return view('index');
+// });
+// Route::get('/about', function () {
+//     return view('about');
+// });
 
