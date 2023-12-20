@@ -14,7 +14,6 @@ class StudentController extends Controller
     public function index()
     {
         //
-        return "well come".$id;
     }
 
     /**
@@ -70,7 +69,6 @@ class StudentController extends Controller
     public function update(Request $request, $id)
     {
         //
-        
     }
 
     /**
