@@ -11,9 +11,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index()
     {
-        return "well come to store".$id;
+        // return "well come to store";
     }
 
     /**
@@ -21,9 +21,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create()
     {
         //
+        return "well come to store";
         
     }
 
