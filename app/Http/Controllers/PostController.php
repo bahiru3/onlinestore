@@ -14,6 +14,7 @@ class PostController extends Controller
     public function index()
     {
         // return "well come to store";
+        return "well come to index";
     }
 
     /**
@@ -24,7 +25,7 @@ class PostController extends Controller
     public function create()
     {
         //
-        return "well come to store";
+        // return "well come to store";
         
     }
 
@@ -46,10 +47,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
         //
-        //return "well come".$id;
+        // return "this is :" .$id;
     }
 
     /**
