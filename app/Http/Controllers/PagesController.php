@@ -65,4 +65,26 @@ class PagesController extends Controller
         'company'=>'Defance',
         'quote'=>'push and ponder in the silces']);
     }
+    public function contact2($display)
+    {
+        return view('pages.contact2',
+        [
+        'displaycontact'=>'$display',
+        'name'=>'Bahiru',
+        'role'=>'fullstack developer',
+        'company'=>'Defance',
+        'quote'=>'push and ponder in the silces']);
+    }
+    public function employee_list_for()
+    {
+        // return "well come to store";
+        //return "w
+        $employees=[
+        ['Bahiru','web developer','ABC Campany','ABC Campany'],
+        ['Debebe','fullstack developer','ABC Campany','CDF Campany'],
+        ['Tsgaye','Java developer','ABC Campany','ABC Campany'],
+        
+    ];
+        return view('pages.employee-list-for')->with('employees',$employees);
+    }
 }

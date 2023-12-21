@@ -51,22 +51,26 @@
          </div>
        </div>
      </nav>
-     <div class="container info">
+     
+           <div class="container info">
        <div class="row">
+           @if($displaycontact)
 
 
-           <div class="card col-lg-3 col-md-3 col-sm-8 text-center mx-auto">
-               <img class="card-img-top rounded-circle" src="https://placehold.co/50" alt="Card image">
-               <div class="card-body">
-                   <h4 class="card-title">{{$name}}</h4>
-                   <br>
-                   <h6>{{$role}} At {{$company}}</h6>
-                   <p> <i> {{$quote}}  </i> </p>
+               <div class="card col-lg-3 col-md-3 col-sm-8 text-center mx-auto">
+                   <img class="card-img-top rounded-circle" src="https://placehold.co/50" alt="Card image">
+                   <div class="card-body">
+                       <h4 class="card-title">{{$name}}</h4>
+                       <br>
+                       <h6>{{$role}} At {{$company}}</h6>
+                       <p> <i> {{$quote}}  </i> </p>
+                   </div>
                </div>
-           </div>
-
-           < <div class="container info"> 
-       
+           @else
+               Nothing To Display Here
+           @endif
+       </div>
+   </div>
        </div>
    </div>
 

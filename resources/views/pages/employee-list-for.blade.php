@@ -55,20 +55,24 @@
        <div class="row">
 
 
-           <div class="card col-lg-3 col-md-3 col-sm-8 text-center mx-auto">
-               <img class="card-img-top rounded-circle" src="https://placehold.co/50" alt="Card image">
-               <div class="card-body">
-                   <h4 class="card-title">{{$name}}</h4>
-                   <br>
-                   <h6>{{$role}} At {{$company}}</h6>
-                   <p> <i> {{$quote}}  </i> </p>
-               </div>
-           </div>
+           @for( $i=0; $i<count($employees); $i++ )
 
-           < <div class="container info"> 
-       
+
+               <div class="card col-lg-3 col-md-3 col-sm-12 text-center mx-auto">
+                   <img class="card-img-top rounded-circle" src="https://placehold.co/50" alt="Card image">
+                   <div class="card-body">
+                       <h4 class="card-title">{{$employees[$i][0]}}</h4>
+                       <br>
+                       <h6>{{$employees[$i][1]}} At {{$employees[$i][2]}}</h6>
+                       <p> <i> {{$employees[$i][3]}} </i> </p>
+                   </div>
+               </div>
+
+
+           @endfor
        </div>
    </div>
+
 
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

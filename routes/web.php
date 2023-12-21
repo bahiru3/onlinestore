@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/pages/employee-list-for','\App\Http\Controllers\PagesController@employee_list_for');
+Route::get('/pages/contact2/{display}','\App\Http\Controllers\PagesController@contact2');
 Route::get('/pages/contact1','\App\Http\Controllers\PagesController@contact1');
 Route::get('/','\App\Http\Controllers\HomeController@index')->name("home.index");
 Route::get('about','\App\Http\Controllers\HomeController@about')->name("home.about");
