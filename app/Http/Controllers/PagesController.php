@@ -56,4 +56,12 @@ class PagesController extends Controller
         $quote='FullStack Developer';
         return view('pages.employee-about', compact('name','company','role','quote'));
     }
+    public function contact1()
+    {
+        return view('pages.contact1',
+        ['name'=>'Bahiru',
+        'role'=>'fullstack developer',
+        'company'=>'Defance',
+        'quote'=>'push and ponder in the silces']);
+    }
 }

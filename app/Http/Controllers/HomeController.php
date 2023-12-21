@@ -13,11 +13,23 @@ class HomeController extends Controller
        $title="About us Online Store";
        $subtitle="About us Page";
        $description="this about page -----";
-       $autor="Developed By fname and lastname";
-       return view('home.about')-> with('title','$title')
-       ->with('subtitle','$subtitle')
-       ->with('description','$description')
-       ->with('autor','$autor');
+       $author="Developed By fname and lastname";
+       return view('home.about')-> with('title',$title)
+       ->with('subtitle',$subtitle)
+       ->with('description',$description)
+       ->with('author',$author);
     }
-    
+    public function index()
+    {
+       
+       $title="About us Online Store";
+       $subtitle="Major Chatagories In Our Shope";
+       $imageUrls=['https://placehold.co/350',
+       'https://placehold.co/350',
+       'https://placehold.co/350'];
+             return view('home.index')->with('title',$title)
+       ->with('subtitle',$subtitle)
+       -> with('imageUrls',$imageUrls);
+    }
+
 }

@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/home/about','\App\Http\Controllers\PagesController@about')->name("home.about");
+Route::get('/pages/contact1','\App\Http\Controllers\PagesController@contact1');
+Route::get('/','\App\Http\Controllers\HomeController@index')->name("home.index");
+Route::get('about','\App\Http\Controllers\HomeController@about')->name("home.about");
 Route::get('/pages/employee-about','\App\Http\Controllers\PagesController@employee_about');
 Route::get('/pages/employee_list','\App\Http\Controllers\PagesController@employee_list');
 Route::get('/pages/employees','\App\Http\Controllers\PagesController@employees');
