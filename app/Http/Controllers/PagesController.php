@@ -59,7 +59,8 @@ class PagesController extends Controller
     public function contact1()
     {
         return view('pages.contact1',
-        ['name'=>'Bahiru',
+        [
+        'name'=>'Bahiru',
         'role'=>'fullstack developer',
         'company'=>'Defance',
         'quote'=>'push and ponder in the silces']);
