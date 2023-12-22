@@ -22,6 +22,8 @@ Route::get('/pages/employee-about','\App\Http\Controllers\PagesController@employ
 Route::get('/pages/employee_list','\App\Http\Controllers\PagesController@employee_list');
 Route::get('/pages/employees','\App\Http\Controllers\PagesController@employees');
 Route::get('/pages/display/{view}','\App\Http\Controllers\PagesController@display');
+Route::get('/products','\App\Http\Controllers\ProductController@index')->name("product.index");
+Route::get('products/{id}','\App\Http\Controllers\ProductController@show')->name("product.show");
 
 
 

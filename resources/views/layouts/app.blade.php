@@ -57,16 +57,17 @@
                <div class="navbar-nav ms-auto">
 
 
-                   <a class="nav-link active" href="/">Home</a>
+                   <a class="nav-link active" href="{{route('home.index')}}">Home</a>
 
-
-                   <a class="nav-link active" href="/products">Products</a>
+                   <a class="nav-link active" href="{{route('product.index')}}">Products</a>
+                   <!-- <a class="nav-link active" href="/products">Products</a> -->
 
 
                    <a class="nav-link active" href="/cart">Cart</a>
 
 
-                   <a class="nav-link active" href="/about">About</a>
+                   <!-- <a class="nav-link active" href="/about">About</a> -->
+                   <a class="nav-link active" href="{{route('home.about')}}">About</a>
 
 
                </div>
