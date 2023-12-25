@@ -5,9 +5,9 @@
 @section('content')
        <div class="card">
 
-           <div class="cord-header">Manage  - Products </div>
+           <div class="card-header">Manage  - Products </div>
                     
-           <div class="cord-body">
+           <div class="card-body">
             <div>
                 <a href="{{ route('admin.product.create')}}">
                     <button type="button" class="btn btn-primary float-end">

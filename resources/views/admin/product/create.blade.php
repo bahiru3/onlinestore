@@ -84,6 +84,18 @@
                        </div>
                    </div>
                </div>
+               <div class="col">
+                       <div class="mb-3 row">
+                           <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">image:</label>
+                           <div class="col-lg-10 col-md-6 col-sm-12">
+                               <input class ="form-control" type="file" name="image">
+                           </div>
+                       </div>
+                   </div>
+                   <div class ="col"> &nbsp;
+
+                   </div>
+               </div>
                <div class="mb-3">
                    <label class="form-label">Description</label>
                    <textarea class="form-control" name="description" rows="3">{{ old('description') }}</textarea>
