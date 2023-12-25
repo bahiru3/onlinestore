@@ -63,10 +63,7 @@
                    <!-- <a class="nav-link active" href="/products">Products</a> -->
 
 
-                   <a class="nav-link active" href="/cart">Cart</a>
-
-                   <!-- <a class="nav-link active" href="{{route('home.cart')}}">Cart</a> -->
-                   <!-- <a class="nav-link active" href="/about">About</a> -->
+                   
                    <a class="nav-link active" href="{{route('home.about')}}">About</a>
 
 
