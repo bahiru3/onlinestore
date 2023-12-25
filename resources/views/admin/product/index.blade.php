@@ -9,7 +9,7 @@
                     
            <div class="cord-body">
             <div>
-                <a href="{{ rout('admin.product.create')}}">
+                <a href="{{ route('admin.product.create')}}">
                     <button type="button" class="btn btn-primary float-end">
                         Create Product
                     </button>
