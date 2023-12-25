@@ -44,8 +44,9 @@
            </form>
        </div>
    </div>
-@endsection -->
-@extends('layouts.admin')
+@endsection
+ -->
+ @extends('layouts.admin')
 
 
 @section('title', $viewData['title'])
@@ -63,8 +64,8 @@
                    @endforeach
                </ul>
            @endif
-           <form method="POST" action="{{ route('admin.product.store') }}" enctype="multipart/form-data">
-               @csrf
+           <form method="POST" action="{{ route('admin.product.store') }}"> 
+           @csrf
                <div class="row">
                    <div class="col">
                        <div class="mb-3 row">
@@ -81,18 +82,6 @@
                                <input name="price" value="{{ old('price') }}" type="number" class="form-control">
                            </div>
                        </div>
-                   </div>
-               </div>
-               <div class="row">
-                   <div class="col">
-                       <div class="mb-3 row">
-                           <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Image:</label>
-                           <div class="col-lg-10 col-md-6 col-sm-12">
-                               <input class="form-control" type="file" name="image">
-                           </div>
-                       </div>
-                   </div>
-                   <div class="col"> &nbsp;
                    </div>
                </div>
                <div class="mb-3">
