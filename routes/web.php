@@ -25,7 +25,11 @@ Route::get('/pages/display/{view}','\App\Http\Controllers\PagesController@displa
 Route::get('/products','\App\Http\Controllers\ProductController@index')->name("product.index");
 Route::get('products/{id}','\App\Http\Controllers\ProductController@show')->name("product.show");
 Route::get('/posts/insert','\App\Http\Controllers\PostsController@insert');
-
+Route::get('/posts/select','\App\Http\Controllers\PostsController@select');
+Route::get('/posts/update','\App\Http\Controllers\PostsController@update');
+Route::get('/posts/find/{id}','\App\Http\Controllers\PostsController@find');
+Route::get('/posts/match/{title}','\App\Http\Controllers\PostsController@match');
+Route::get('/posts/matchShowTitle/{title}','\App\Http\Controllers\PostsController@matchShowTitle');
 
 
 
