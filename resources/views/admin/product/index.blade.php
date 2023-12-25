@@ -8,10 +8,18 @@
            <div class="cord-header">Manage  - Products </div>
                     
            <div class="cord-body">
-            
+            <div>
+                <a href="{{ rout('admin.product.create')}}">
+                    <button type="button" class="btn btn-primary float-end">
+                        Create Product
+                    </button>
+                </a>
+                <br>
+            </div>
            
            <!-- <div class="card-body">Welcome to the Admin Panel,use the sidbar Panel to naveget the different option -->
 <table class="table table-bordered table-striped">
+<br>    
     <thead>
         <tr>
             <th scope="col">ID</th>
