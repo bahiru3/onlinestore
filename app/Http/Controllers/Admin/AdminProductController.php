@@ -43,7 +43,7 @@ if($request->hasFile('image')){
 
     
 $imageName=$newProduct->id.'.'.$request->file('image')->extension();
-Storeage::disk('public')->put($imageName,file_get_contents($request->file('image')->getRealPath()));
+Storage::disk('public')->put($imageName,file_get_contents($request->file('image')->getRealPath()));
 $newProduct->image=$imageName;
 $newProduct->save();
 
