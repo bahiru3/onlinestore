@@ -35,6 +35,7 @@ Route::get('/admin','\App\Http\Controllers\Admin\AdminHomeController@index')->na
 Route::get('/admin/products','\App\Http\Controllers\Admin\AdminProductController@index')->name("admin.product.index");
 Route::get('/admin/products/store','\App\Http\Controllers\Admin\AdminProductController@store')->name("admin.product.store");
 Route::get('/admin/products/create','\App\Http\Controllers\Admin\AdminProductController@create')->name("admin.product.create");
+// Route::any('/save', [App\Http\Controllers\HomeController::class, 'save'])->name("admin.product.save");
 
 
 
