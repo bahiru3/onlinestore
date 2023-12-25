@@ -30,6 +30,11 @@ Route::get('/posts/update','\App\Http\Controllers\PostsController@update');
 Route::get('/posts/find/{id}','\App\Http\Controllers\PostsController@find');
 Route::get('/posts/match/{title}','\App\Http\Controllers\PostsController@match');
 Route::get('/posts/matchShowTitle/{title}','\App\Http\Controllers\PostsController@matchShowTitle');
+// Route::get('/admin','\App\Http\Controllers\AdminHomeController@matchShowTitle');
+Route::get('/admin','\App\Http\Controllers\Admin\AdminHomeController@index')->name("admin.home.index");
+Route::get('/admin/products','\App\Http\Controllers\Admin\AdminProductController@index')->name("admin.product.index");
+Route::get('/admin/products/store','\App\Http\Controllers\Admin\AdminProductController@store')->name("admin.product.store");
+Route::get('/admin/products/create','\App\Http\Controllers\Admin\AdminProductController@create')->name("admin.product.create");
 
 
 
