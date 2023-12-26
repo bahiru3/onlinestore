@@ -37,6 +37,8 @@ Route::post('/admin/products/store','\App\Http\Controllers\Admin\AdminProductCon
 Route::get('/admin/products/create','\App\Http\Controllers\Admin\AdminProductController@create')->name("admin.product.create");
 Route::get('/admin/products/{id}/delete','\App\Http\Controllers\Admin\AdminProductController@delete')->name("admin.product.delete");
 
+Route::get('/posts/insert_with_image','\App\Http\Controllers\PostsController@insertPostWithPostImage');
+
 
 
 ?>

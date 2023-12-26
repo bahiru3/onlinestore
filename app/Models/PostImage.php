@@ -5,14 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class PostImage extends Model
 {
     use HasFactory;
-    protected $table='posts';
+    protected $table=('postImages');
     protected $primaryKey='id';
-    public function postImage()
-    {
-        return $this->hasOne('APP\Models\PostImage');
-    }
-
+    protected $fillable=[
+        'name',
+        'url'
+    ];
 }

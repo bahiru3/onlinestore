@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\PostImage;
 use Illuminate\Support\Facades\View; 
 use Illuminate\Http\Request;
 
@@ -86,5 +87,20 @@ class PagesController extends Controller
         
     ];
         return view('pages.employee-list-for')->with('employees',$employees);
+    }
+    public function insertPostWithPostImage()
+    {
+        $post=new Post();
+        $post->title('New Person');
+        $post->body('QY Anayst');
+        $postImage=new PostImage(['name'=>'NewPerson Image','url'=>'/images/postImages/232.png']);
+        $post->save();
+        $post->postImage()->save($postImage);
+        $post->save();
+        return $post;
+    }
+     function getPostImage($postId)
+    {
+return Post::find($postId)->postImage;
     }
 }
