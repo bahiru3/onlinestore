@@ -30,12 +30,32 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($viewData['products'] as $product)
+        <!-- @foreach ($viewData['products'] as $product)
         <tr>
             <td>{{ $product->id }}</td>
             <td>{{ $product->name }}</td>
             <td>Edit</td>
             <td>Delete</td>
+        </tr>
+        @endforeach -->
+        @foreach ($viewData['products'] as $product)
+        <tr>
+            <td>{{ $product->id }}</td>
+            <td>{{ $product->name }}</td>
+            <td>
+                <button class="btn btn-primary">
+                    <i class=bi-pencil></i>
+
+                </button>
+            </td>
+            <form action="{{ route('admin.product.delete', $product->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class='btn btn-danger'>
+                <i class=bi-trash></i>
+                </button>
+            </form>
+            </td>
         </tr>
         @endforeach
     </tbody>

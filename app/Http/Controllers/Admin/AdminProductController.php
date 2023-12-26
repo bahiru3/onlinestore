@@ -21,13 +21,13 @@ class AdminProductController extends Controller
     {
     $viewData = [];
     $viewData["title"] = "Admin Page - Admin Online Store";
-    $viewData["products"] = Product::all();
+    // $viewData["products"] = Product::all();
     return view('admin.product.create')->with("viewData", $viewData);
     }
     public function store(request $request)
     {
         request()->validate([
-            "tittle"=>"required|max:255",
+            "name"=>"required|max:255",
             "description"=>"required",
             "price"=>"required|numeric|gt:0",
             'image'=>'image',
@@ -53,5 +53,11 @@ $newProduct->save();
 
 
     return redirect()->route('admin.product.index');
+    }
+    public function delete($id)
+    {
+    $viewData = [];
+    Product::destroy($id);
+    return back();
     }
 }
