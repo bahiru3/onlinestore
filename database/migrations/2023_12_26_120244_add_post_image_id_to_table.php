@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('postImages', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('url')->unique();
-            $table->unsignedBigInteger('post_id');
-            $table->timestamps();
+        Schema::table('posts', function (Blueprint $table) {
+            //
+            $table->unsignedBigInteger('postImage_id')->nullable();
         });
     }
 
@@ -29,6 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('postImages');
+        Schema::table('posts', function (Blueprint $table) {
+            //
+            $table->dropColumn('postImage_id');
+        });
     }
 };
