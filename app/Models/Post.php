@@ -12,7 +12,11 @@ class Post extends Model
     protected $primaryKey='id';
     public function postImage()
     {
-        return $this->hasOne('APP\Models\PostImage');
+        return $this->hasOne('\App\Models\PostImage');
+    }
+    public function comments()
+    {
+        return $this->hasOne('\App\Models\Comment');
     }
 
 }
